@@ -362,6 +362,7 @@
     <comp lib="4" loc="(1400,450)" name="RAM">
       <a name="addrWidth" val="11"/>
       <a name="appearance" val="classic"/>
+      <a name="asyncread" val="true"/>
       <a name="dataWidth" val="16"/>
     </comp>
     <comp loc="(1490,1100)" name="DR">
@@ -900,12 +901,13 @@
       <a name="addrWidth" val="7"/>
       <a name="appearance" val="evolution"/>
       <a name="contents">addr/data: 7 20
-2c3 10002 20040 40 406 40 2c3 3040
-2c3 1400a e0040 40 2c3 2000e 9400f e0040
-2c3 10002 c040 40 2c3 3040 2c3 1c018
-e0019 1001a 1801b a001c 3040 2c3 1001f 18020
-94021 94622 e0040 29*0 c0041 12842 a0180 10044
-a0100
+2d3 10002 20050 50 4*0 40a 50 2d3
+3050 4*0 2d3 14012 e0050 50 4*0 2d3
+2001a 9401b e0050 4*0 2d3 10022 c050 50
+4*0 2d3 3050 6*0 2d3 1c032 e0033 10034
+18035 a0036 3050 0 2d3 1003a 1803b 9403c
+9463d e0050 0 0 2d3 10042 80050 13*0
+c0051 12852 a0180 10055 a0100
 </a>
       <a name="dataWidth" val="20"/>
     </comp>
