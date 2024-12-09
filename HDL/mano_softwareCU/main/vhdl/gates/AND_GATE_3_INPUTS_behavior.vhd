@@ -1,12 +1,5 @@
 --==============================================================================
---== Logisim-evolution goes FPGA automatic generated VHDL code                ==
---== https://github.com/logisim-evolution/                                    ==
---==                                                                          ==
---==                                                                          ==
---== Project   : mano_softwareCU                                              ==
---== Component : AND_GATE_3_INPUTS                                            ==
---==                                                                          ==
---==============================================================================
+=========================================================================
 
 ARCHITECTURE platformIndependent OF AND_GATE_3_INPUTS IS 
 

@@ -1,12 +1,5 @@
 --==============================================================================
---== Logisim-evolution goes FPGA automatic generated VHDL code                ==
---== https://github.com/logisim-evolution/                                    ==
---==                                                                          ==
---==                                                                          ==
---== Project   : mano_softwareCU                                              ==
---== Component : Multiplexer_bus_4                                            ==
---==                                                                          ==
---==============================================================================
+=========================================================================
 
 
 LIBRARY ieee;

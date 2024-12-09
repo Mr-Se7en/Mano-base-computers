@@ -1,12 +1,5 @@
 --==============================================================================
---== Logisim-evolution goes FPGA automatic generated VHDL code                ==
---== https://github.com/logisim-evolution/                                    ==
---==                                                                          ==
---==                                                                          ==
---== Project   : mano_softwareCU                                              ==
---== Component : Comparator                                                   ==
---==                                                                          ==
---==============================================================================
+=========================================================================
 
 ARCHITECTURE platformIndependent OF Comparator IS 
 
