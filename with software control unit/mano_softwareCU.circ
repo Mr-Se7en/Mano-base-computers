@@ -78,9 +78,6 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <boardmap boardname="TERASIC_DE1_SOC">
-      <mc/>
-    </boardmap>
     <comp lib="0" loc="(1000,1750)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="PCTDR"/>
@@ -224,6 +221,10 @@
       <a name="facing" val="south"/>
       <a name="label" val="ADD"/>
     </comp>
+    <comp lib="0" loc="(1420,1610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Cout"/>
+    </comp>
     <comp lib="0" loc="(1450,1280)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="SUB"/>
@@ -264,16 +265,8 @@
       <a name="radix" val="16"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(1830,1550)" name="Splitter">
-      <a name="appear" val="center"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
     <comp lib="0" loc="(1880,1430)" name="Tunnel">
       <a name="label" val="AC_Z"/>
-    </comp>
-    <comp lib="0" loc="(1930,1620)" name="Tunnel">
-      <a name="label" val="AC_S"/>
     </comp>
     <comp lib="0" loc="(270,1670)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -286,7 +279,7 @@
     </comp>
     <comp lib="0" loc="(280,1370)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="AC_S"/>
+      <a name="label" val="Cout"/>
     </comp>
     <comp lib="0" loc="(280,1400)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -527,6 +520,7 @@
     <wire from="(1410,810)" to="(1470,810)"/>
     <wire from="(1420,1290)" to="(1420,1310)"/>
     <wire from="(1420,1290)" to="(1450,1290)"/>
+    <wire from="(1420,1610)" to="(1470,1610)"/>
     <wire from="(1430,1330)" to="(1430,1370)"/>
     <wire from="(1430,1330)" to="(1450,1330)"/>
     <wire from="(1430,740)" to="(1430,790)"/>
@@ -546,6 +540,7 @@
     <wire from="(1460,1850)" to="(1510,1850)"/>
     <wire from="(1470,1260)" to="(1470,1370)"/>
     <wire from="(1470,1260)" to="(1640,1260)"/>
+    <wire from="(1470,1590)" to="(1470,1610)"/>
     <wire from="(1470,1640)" to="(1470,1720)"/>
     <wire from="(1470,1830)" to="(1470,2040)"/>
     <wire from="(1470,1830)" to="(1510,1830)"/>
@@ -585,10 +580,8 @@
     <wire from="(1750,120)" to="(1750,1210)"/>
     <wire from="(1760,1440)" to="(1760,1550)"/>
     <wire from="(1760,1440)" to="(1810,1440)"/>
-    <wire from="(1760,1550)" to="(1830,1550)"/>
     <wire from="(1800,1420)" to="(1810,1420)"/>
     <wire from="(1850,1430)" to="(1880,1430)"/>
-    <wire from="(1850,1620)" to="(1930,1620)"/>
     <wire from="(240,1130)" to="(1490,1130)"/>
     <wire from="(240,1130)" to="(240,1190)"/>
     <wire from="(240,1190)" to="(280,1190)"/>
@@ -802,7 +795,7 @@
     </comp>
     <comp lib="0" loc="(180,440)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="AC_Sign"/>
+      <a name="label" val="Cout"/>
     </comp>
     <comp lib="0" loc="(210,410)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -989,8 +982,11 @@
 2001a 9401b e0050 4*0 2d3 10022 c050 50
 4*0 2d3 3050 6*0 2d3 1c032 e0033 10034
 18035 a0036 3050 0 2d3 1003a 1803b 9403c
-9463d e0050 0 0 2d3 10042 80050 13*0
-c0051 12852 a0180 10055 a0100
+9463d e0050 0 0 2d3 10042 80050 5*0
+2d3 44b 50 3050 4*0 c0051 12852 a0180
+10055 a0100 0 0 0 2d3 45b 3050
+50 4*0 2d3 663 50 3050 4*0 2d3
+66b 50 3050 4*0 2d3 10072 4050
 </a>
       <a name="dataWidth" val="20"/>
       <a name="label" val="ROM_1"/>
@@ -1558,6 +1554,11 @@ c0051 12852 a0180 10055 a0100
       <a name="label" val="Add_mode"/>
     </comp>
     <comp lib="0" loc="(600,1090)" name="Power"/>
+    <comp lib="0" loc="(670,450)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(910,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -1649,6 +1650,8 @@ c0051 12852 a0180 10055 a0100
     <wire from="(530,390)" to="(530,400)"/>
     <wire from="(530,400)" to="(570,400)"/>
     <wire from="(590,300)" to="(590,370)"/>
+    <wire from="(590,410)" to="(590,450)"/>
+    <wire from="(590,450)" to="(670,450)"/>
     <wire from="(590,600)" to="(660,600)"/>
     <wire from="(600,1090)" to="(640,1090)"/>
     <wire from="(600,520)" to="(750,520)"/>
